@@ -90,4 +90,5 @@ def serve_static(filename):
     return send_from_directory('static', filename)
 
 if __name__ == '__main__':
+    from waitress import serve
     app.run(debug=True, host='0.0.0.0', port=5001)
