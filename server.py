@@ -3,7 +3,7 @@ import csv
 from flask import Flask, jsonify, request, send_from_directory, render_template_string
 
 app = Flask(__name__)
-image_folder = 'images'
+image_folder = 'static/images'
 csv_filename = "responses.csv"
 
 # HTML content for the index page
@@ -91,4 +91,4 @@ def serve_static(filename):
 
 if __name__ == '__main__':
     from waitress import serve
-    app.run(debug=True, host='0.0.0.0', port=5001)
+    app.run(debug=False)
